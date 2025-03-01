@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+body{
+    background: url("Image/Mt_Blue.jpg") center;
+    background-size: 101vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    min-height: 100vh;
+}
+
+.container{
+border: solid white 2px;
+border-radius: 20px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+height: 30vh;
+width: 20vw;
+}
+.imgg{
+    width: 10vw;
+
+    display: block;
+}
+
+.book{
+    background   : none;
+
+    border: solid red 2px;
+
+    padding: 0;
+
+    display: inline-block;
+
+}
+
+.div-summary{
+
+    position: relative;
+
+    bottom: 3vh;
+
+}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image_Testing</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="CSS/book_summary_testing_image.css">
+
+    
+
+<form class="container" id="container">
+
+    <button class="book" type="button" onclick="show('wicked-gods ')"><img class="imgg" src="Image/to_gaze.jpg"></button>
+
+</form>
+
+
+
+
+<div  id="wicked-gods" class="div-summary summary">
+
+    <button class="back-button" type="button" onclick="back('wicked-gods')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Image/to_gaze.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: Molly X. Chang</p>
+            <p>Date published: April 16, 2024</p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 780</section>
+        <button type="button" onclick="goToPage('wicked-gods')">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">To Gaze Upon Wicked Gods</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    She has power over death. He has power over her. When two enemies strike a dangerous bargain, 
+                    will they end a war . . . or ignite one?
+                    Heroes die, cowards live. Daughter of a conquered world, Ruying hates the invaders who descended from the heavens
+                     long before she was born and defeated the magic of her people with technologies unlike anything her world had ever seen.
+                     Blessed by Death, born with the ability to pull the life right out of mortal bodies, Ruying shouldn’t have to fear these foreign
+                      invaders, but she does. Especially because she wants to keep herself and her family safe.When Ruying’s Gift is discovered by
+                       an enemy prince, he offers her an impossible deal: If she becomes his private assassin and eliminates his political
+                        rivals–whose deaths he swears would be for the good of both their worlds and would protect her people from further 
+                        brutalization–her family will never starve or suffer harm again. But to accept this bargain, she must use the powers
+                         she has always feared, powers that will shave years off her own existence.Can Ruying trust this prince, whose promises of a 
+                         better world make her heart ache and whose smiles make her pulse beat faster? Are the evils of this agreement really in the 
+                         service of a much greater good? Or will she betray her entire nation by protecting those she loves the most?</p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Fantasy, Fiction, Magic, Romance 
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+<script>
+function show(){
+const button = document.getElementById("container");
+const summary = document.getElementById("wicked-gods");
+
+if(summary.style.display === "none"){
+summary.style.display = "block";
+button.style.display = "none";
+}else{
+    summary.style.display = "none";
+}
+}
+
+function back(){
+    const button = document.getElementById("container");
+    const summary = document.getElementById("wicked-gods");
+
+    if(summary.style.display === "block"){
+        summary.style.display = "none";
+        button.style.display = "";
+
+    }else{
+        summary.style.display = "block";
+    }
+}
+</script>
+
